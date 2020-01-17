@@ -6,6 +6,9 @@ import threading
 
 from tqdm.auto import tqdm
 
+ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(ROOT_PATH)
+
 import imt.util.file as file_util
 import imt.util.nlp as nlp_util
 from imt.corpus import Corpus
@@ -14,7 +17,6 @@ from imt.encoder.glove import GloveEncoder
 from imt.encoder.universal_sentence_encoder import USEEncoder
 from imt.util.config import load_yaml_config
 
-ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 PRETRAINED_CONFIG_PATH = os.path.join(ROOT_PATH, "config/pretrained_paths.yml")
 
 PREPARE_DATASET_SCRIPT = os.path.join(ROOT_PATH, 'script/utility/prepare_dataset.py')
