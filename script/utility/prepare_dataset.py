@@ -1,5 +1,10 @@
 import argparse
 
+from pathlib import Path
+import sys
+
+sys.path.append((Path(__file__).parent / '../..').__str__())
+
 from imt.util.file import read_file, write_file, delete_file, split_file
 from imt.util.nlp import get_spacy_model
 
